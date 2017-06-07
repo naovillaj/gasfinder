@@ -1,42 +1,48 @@
 'use strict';
 
-const List = (update) => {
-  const sectionList = $("<section id='List-Section'></section>");
-  const rowList = $("<div class='row'></div>");
-  // const divList = $("<div class='col s12'></div>");
-  // const divFirst = $("<div id='name'></div>");
-  // const divFirst = $("<div></div>");
-  // const divFirst = $("<div></div>");
+// const List = (update) => {
+//   const sectionList = $("<section id='List-Section'></section>");
+//   const rowList = $("<div class='row'></div>");
+//
+//   state.stations.forEach(function(e){
+//
+//   	const divList = $("<div class='col s12'></div>");
+//   	 const divFirst = $("<div id='name'></div>");
+//
+//   	divFirst.append(e.name + "<br>");
+//   	divFirst.append(e.address + "<br>");
+//   	divFirst.append(e.district + "<br>");
+//
+//   	divList.append(divFirst);
+//   	rowList.append(divList);
+//   })
+//
+//   sectionList.append(rowList);
+//
+//
+//   return sectionList;
+// }
 
-  state.stations.forEach(function(e){
+const List = (station) => {
 
-  	const divList = $("<div class='col s12'></div>");
-  	 const divFirst = $("<div id='name'></div>");
+  const divList = $("<div class='lista'></div>");
+  const pName = $("<p id='name'>"+station.name+"</p>");
+  const pAddress = $("<p id='address'>"+station.address+"</p>");
+  const pDistrict = $("<p id='district'>"+station.name+"</p>");
+  const flag = $("<i class='fa fa-map-o flag' aria-hidden='true'></i>")
 
-  	// divName.append(e.name + "<br>");
-  	// divAddress.append(e.address + "<br>");
-  	// divDistrict.append(e.district + "<br>");
+  // sectionList.append(divList);
+  divList.append(pName);
+  divList.append(pAddress);
+  divList.append(pDistrict);
+  divList.append(flag);
+}
 
-  	divFirst.append(e.name + "<br>");
-  	divFirst.append(e.address + "<br>");
-  	divFirst.append(e.district + "<br>");
+const AllStations = (update) => {
+  const sectionList = $("<section id='list-Section'></section>");
+  state.stations.forEach((station) =>{
+    sectionList.append(List(station));
+  });
 
-  	// divSecond.append(e.name);
-  	// divSecond.append(e.address);
-  	// divSecond.append(e.district);
-
-  	// divThird.append(e.name);
-  	// divThird.append(e.address);
-  	// divThird.append(e.district);
-
-  	divList.append(divFirst);
-  	// divList.append(divAddress);
-  	// divList.append(divDistrict);
-  	rowList.append(divList);
-  })
-
-  sectionList.append(rowList);
-  
-  
   return sectionList;
 }

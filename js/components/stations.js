@@ -13,5 +13,10 @@ const Stations = (update) => {
 
  sectionSearch.append(rowSearch);
 
+   input.keyup(function(){
+   filterByDistrict(state.stations, $(this).val());
+
+   })
+
   return sectionSearch;
 }
