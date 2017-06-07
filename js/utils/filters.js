@@ -3,17 +3,19 @@
 const filterByDistrict = (stations,query) => {
 
   state.stations.forEach(function(e){
-    if(e.district.toLowerCase() == query.toLowerCase(){
-      $(#list-Section).empty();
+    if(e.district.toLowerCase() == query.toLowerCase()){
+      $("#list-Section").empty();
 
       const filterList = $("<div class='filter-List'></div>");
       const textList = $("<div class='text-List'></div>");
+      const flag = $("<i class='fa fa-map-o flag' aria-hidden='true'></i>")
 
-      textList.text(e.name + e.address + e.district);
+      textList.html("<strong>"+e.name+"</strong><br>" + e.address+"<br>" + e.district);
       filterList.append(textList);
-      $("#List-Section").append(textList);
-    })
-  })
-	// const vInput = $(#input).val();
+      $("#list-Section").append(textList);
+      $("#list-Section").append(flag);
 
+    }
+  })
+	
 }

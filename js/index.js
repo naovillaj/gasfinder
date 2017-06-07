@@ -5,7 +5,8 @@ const render = (root) => {
   const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(Header(_ => render(root)));
   wrapper.append(Stations());
-  wrapper.append(List());
+  wrapper.append(AllStations());
+  wrapper.append(FindMap());
   root.append(wrapper);
 }
 

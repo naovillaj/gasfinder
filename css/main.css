@@ -18,23 +18,63 @@ header .fa-chevron-left {
   margin-right: 16px;
 }
 
+hr{
+  color: black;
+  border: 1px solid gray;
+}
+
 #search-Section{
   background-color: #F44336;
+  margin-top: 0;
+}
+
+.row{
+  margin: 0;
 }
 
 #searcher{
   background-color: white;
-  padding: 10px;
-  border: 2px solid #9e9e9e;
+  padding: 5px;
+  border: 2px solid white;
   border-radius: 10px;
   color: black;
   box-shadow: none;
+  width: 70%;
 }
 
 #list-Section{
-  background-color: #9e9e9e;
+  position: relative;
+  background-color: lightgray;
+  padding-left: 20px;
+  padding: 10px;
+}
+
+.row .divSearch{
+  background-color: white;
+  padding: 10px;
+  margin: 20px; 
+}
+
+.lupa{
+  padding: 5px;
+  background-color: white;
+  height: 100%;
+  font-size: 30px;
 }
 
 #name{
   font-weight: bold;
+}
+
+.lista{
+  position: relative;
+}
+
+.flag{
+  position: absolute;
+  right: 5%;
+  bottom: 50%;
+  color: black;
+  background-color: lightgray;
+  cursor: pointer;
 }
